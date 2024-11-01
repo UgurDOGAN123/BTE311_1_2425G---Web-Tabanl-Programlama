@@ -1,0 +1,18 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: auto auto auto;
+  gap: 10px; 
+  height: 600px;
+}
+
+div > div{
+    grid-column:span 1;
+}
+.Columns3{
+    grid-column: span 3;
+}
+.Columns2{
+    grid-column:span 2;
+}
