@@ -1,0 +1,73 @@
+section{
+    margin: 200px 200px 200px 200px;
+    display: flex;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: aqua;
+    display: flex;
+}
+div div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.Ağız{
+    margin: 50px 0px 0px -37px;
+    width: 30px;
+    height: 30px;
+}
+#Sol_Sağa{
+    animation-name:Sol_Sağ;
+    animation-duration: 4s;
+}
+@keyframes Sol_Sağ{
+    50%{ margin-left: 100px; }
+    100%{margin-left: 0px;}
+}
+
+#Dönme{
+    animation-name:Dönme ;
+    animation-duration: 4s;
+}
+@keyframes Dönme{
+
+    50%{rotate: 180deg; }
+    100%{rotate: 360deg; }
+}
+
+#Transparan{
+    animation-name:Transparan ;
+    animation-duration: 4s;
+}
+@keyframes Transparan{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#Büyüt_küçült
+{
+    animation-name:Büyüt-Küçült ;
+    animation-duration: 4s;
+}
+@keyframes Büyüt-Küçült{
+0% {scale: 1;}    
+50% {scale: 0.2;}    
+100% {scale: 1;}    
+}
+#Yukarı_aşağı{
+    animation-name:Yukarı-Aşağı;
+    animation-duration: 4s;
+}
+@keyframes Yukarı-Aşağı{
+    0% { margin-top: 0px;}
+    50%{ margin-top: 200px; }
+    100%{ margin-top: 0px; }
+}
