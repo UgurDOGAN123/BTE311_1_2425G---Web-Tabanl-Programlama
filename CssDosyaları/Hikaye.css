@@ -1,0 +1,63 @@
+/* Temel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    
+}
+
+/* Üst Menü: Bağlantılar */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 4px px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* İçerik bölümü */
+.content h1 {
+    color: #333;
+}
+.content p {
+    margin-top: 10px;
+}
+section {
+    padding-top: 80px; /* Başlıkların menü ile çakışmaması için ekstra boşluk */
+}
+
+/* Sesli dinleme kısmı */
+.audio {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+.audio figcaption {
+    font-weight: bold;
+}
