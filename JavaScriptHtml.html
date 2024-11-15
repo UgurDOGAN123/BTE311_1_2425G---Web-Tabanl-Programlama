@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Java Script Ödevi</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <img id="Resim1" src="" alt="">
+                <button onclick="document.getElementById('Resim1').style.display = 'block'"> ilk resmi göster </button>
+                <button onclick="document.getElementById('Resim1').style.display = 'none'"> ilk resmi gizle </button>
+            </th>
+            <th>
+                <img id="Resim2" src="" alt="">
+                <button onclick="document.getElementById('Resim2').style.display = 'block'"> ikinci resmi göster </button>
+                <button onclick="document.getElementById('Resim2').style.display = 'none'"> ikinci resmi gizle </button>
+                
+            </th>
+            <th>
+                <img id="Resim3" src="" alt="">
+                <button onclick="document.getElementById('Resim3').style.display = 'block'"> üçüncü resmi göster </button>
+                <button onclick="document.getElementById('Resim3').style.display = 'none'"> üçüncü resmi gizle </button>
+            
+            </th>
+        </tr>
+    </table>
+    <script>
+        const Resimler= [
+            'Material/Resimler/Manzara1.jfif','Material/Resimler/Manzara2.jfif','Material/Resimler/Manzara3.jfif','Material/Resimler/Manzara4.jfif', 'Material/Resimler/Manzara5.jfif',
+            'Material/Resimler/Manzara6.jfif','Material/Resimler/Manzara7.jfif','Material/Resimler/Manzara8.jfif','Material/Resimler/Manzara9.jfif','Material/Resimler/Manzara10.jfif'
+        ] 
+
+        function ResimDüzenle(hangiResimEklenecek,resimID)
+        {
+            document.getElementById(`Resim${resimID}`).src = `Materyal/Resimler/Manzara${hangiResimEklenecek}.jpg`;
+
+        }
+        
+        function ResimSeç()
+        {
+            for (let i = 1; i <= 3; i++) {
+                ResimDüzenle(Math.floor(Math.random() * 10) + 1,i);
+}
+        }
+        ResimSeç()
+    </script>
+
+</body>
+</html>
