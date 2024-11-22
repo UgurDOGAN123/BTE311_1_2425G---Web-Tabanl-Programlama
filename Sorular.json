@@ -1,0 +1,63 @@
+[
+    {
+      "soru": "HTML'de bir resim eklemek için hangi etiket kullanılır?",
+      "secenekler": ["<image>", "<img>", "<picture>", "<src>"],
+      "dogruCevap": "<img>"
+    },
+    {
+      "soru": "Aşağıdaki <a> etiketi ne işe yarar? <a href=\"https://example.com\" target=\"_blank\">Example</a>",
+      "secenekler": [
+        "Sayfayı yeni bir sekmede açar",
+        "Sayfayı aynı sekmede açar",
+        "Bir resim yükler",
+        "Sayfayı yeniler"
+      ],
+      "dogruCevap": "Sayfayı yeni bir sekmede açar"
+    },
+    {
+      "soru": "Hangisi bir HTML form elemanıdır?",
+      "secenekler": ["<button>", "<div>", "<span>", "<header>"],
+      "dogruCevap": "<button>"
+    },
+    {
+      "soru": "Bir HTML öğesine bir CSS stil tanımlamak için hangi özellik kullanılır?",
+      "secenekler": ["src", "style", "script", "link"],
+      "dogruCevap": "style"
+    },
+    {
+      "soru": "CSS'de bir öğenin arka plan rengini değiştirmek için hangi özellik kullanılır?",
+      "secenekler": ["text-color", "color", "background-color", "background-image"],
+      "dogruCevap": "background-color"
+    },
+    {
+      "soru": "Hangisi bir sınıf (class) seçici için doğru yazımdır?",
+      "secenekler": [".className", "#className", "className", "<className>"],
+      "dogruCevap": ".className"
+    },
+    {
+      "soru": "Aşağıdaki kodun çıktısı nedir? console.log(\"2\" + 2);",
+      "secenekler": ["4", "22", "undefined", "NaN"],
+      "dogruCevap": "22"
+    },
+    {
+      "soru": "JavaScript'te bir değişken oluşturmak için hangi anahtar kelime kullanılamaz?",
+      "secenekler": ["var", "let", "const", "set"],
+      "dogruCevap": "set"
+    },
+    {
+      "soru": "JavaScript'te bir dizinin uzunluğunu nasıl öğrenebilirsiniz?",
+      "secenekler": ["array.size", "array.length", "array.count", "array.getLength"],
+      "dogruCevap": "array.length"
+    },
+    {
+      "soru": "Aşağıdaki kod ne yapar? document.getElementById(\"myDiv\").style.color = \"red\";",
+      "secenekler": [
+        "\"myDiv\" sınıfına sahip öğeyi kırmızı yapar",
+        "\"myDiv\" kimliğine (id) sahip öğenin metin rengini kırmızı yapar",
+        "Sayfadaki tüm metinleri kırmızı yapar",
+        "Hiçbir şey yapmaz"
+      ],
+      "dogruCevap": "\"myDiv\" kimliğine (id) sahip öğenin metin rengini kırmızı yapar"
+    }
+  ]
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Açılır Duyuru</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .duyuru {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .duyuru.goster {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .duyuru.gizle {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="duyuru" class="duyuru">
+    Bu bir duyuru mesajıdır!
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const duyuru = document.getElementById("duyuru");
+
+      // Duyuruyu göster
+      setTimeout(() => {
+        duyuru.classList.add("goster");
+      }, 500);
+
+      // 5 saniye sonra duyuruyu gizle
+      setTimeout(() => {
+        duyuru.classList.remove("goster");
+        duyuru.classList.add("gizle");
+      }, 5500);
+    });
+  </script>
+</body>
+</html>
