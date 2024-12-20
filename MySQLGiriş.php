@@ -6,6 +6,7 @@
     <title>PHP Form Örneği</title>
 </head>
 <body>
+    <!-- Tablo: kişi, sütunlar: ad, soyad, email, dersi_sevdin_mi-->
     <h1>PHP Form İşlemleri</h1>
 
     
@@ -17,7 +18,15 @@
         <input type="text" id="soyad" name="soyad" required><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required><br><br>
+        
+        <label>Dersi sevdin mi?</label><br>
+        <input type="radio" id="evet" name="dersi_sevdin_mi" value="evet" required>
+        <label for="evet">Evet</label><br>
+        <input type="radio" id="hayir" name="dersi_sevdin_mi" value="hayir" required>
+        <label for="hayir">Hayır</label><br><br>
+
         <button type="submit" name="add_user">Ekle</button>
+
     </form>
 
     
@@ -38,26 +47,26 @@ $dbname = "test"; // Veritabanı adı
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
 // Form 1: Veritabanına veri ekleme
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user'])) {
     $ad = $conn->real_escape_string($_POST['ad']);
     $soyad = $conn->real_escape_string($_POST['soyad']);
     $email = $conn->real_escape_string($_POST['email']);
-    $sql = "INSERT INTO kişi (ad, soyad, email) VALUES ('$ad', '$soyad', '$email')";
+    $dersi_sevdin_mi = $conn->real_escape_string($_POST['dersi_sevdin_mi']);
+    $sql = "INSERT INTO kişi (ad, soyad, email, dersi_sevdin_mi) VALUES ('$ad', '$soyad', '$email', '$dersi_sevdin_mi')";
     $conn->query($sql);
 }
 
 // Form 2: Veri arama
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_user'])) {
     $ad = $conn->real_escape_string($_POST['search_ad']);
-    $sql = "SELECT soyad, email FROM kişi WHERE ad='$ad'";
+    $sql = "SELECT soyad, email, dersi_sevdin_mi FROM kişi WHERE ad='$ad'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<h3>Sonuçlar:</h3>";
         while ($row = $result->fetch_assoc()) {
-            echo "Soyad: " . $row['soyad'] . " - Email: " . $row['email'] . "<br>";
+            echo "Soyad: " . $row['soyad'] . " - Email: " . $row['email'] . " - Dersi Sevdi mi?: " . $row['dersi_sevdin_mi']."<br>";
         }
     } else {
         echo "Kişi bulunamadı.";
